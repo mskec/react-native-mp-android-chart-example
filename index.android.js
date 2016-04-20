@@ -16,7 +16,23 @@ class reactNativeMPAndroidChartExample extends React.Component {
 
     this.state = {
       legend: {
-        enabled: true
+        enabled: true,
+        textColor: "blue",
+        textSize: 12,
+        position: "BELOW_CHART_RIGHT",
+        form: "SQUARE",
+        formSize: 14,
+        xEntrySpace: 10,
+        yEntrySpace: 5,
+        formToTextSpace: 5,
+        wordWrapEnabled: true,
+        maxSizePercent: 0.5,
+        fontFamily: 'monospace',
+        fontStyle: 1,
+        custom: {
+          colors: ['red', 'blue', 'green'],
+          labels: ['Red label', 'Blue label', 'Green label']
+        }
       }
     };
 
@@ -34,7 +50,6 @@ class reactNativeMPAndroidChartExample extends React.Component {
   }
 
   render() {
-    console.log('View|render', this.state)
     return (
       <View style={styles.container}>
         <LineChart
