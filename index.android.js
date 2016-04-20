@@ -15,6 +15,7 @@ class reactNativeMPAndroidChartExample extends React.Component {
     super();
 
     this.state = {
+      data: {},
       legend: {
         enabled: true,
         textColor: "blue",
@@ -31,12 +32,67 @@ class reactNativeMPAndroidChartExample extends React.Component {
         fontStyle: 1,
         custom: {
           colors: ['red', 'blue', 'green'],
-          labels: ['Red label', 'Blue label', 'Green label']
+          labels: ['Company X', 'Company Y', 'Company Dashed']
         }
       }
     };
 
     this.toggleLegend = this.toggleLegend.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState(
+      React.addons.update(this.state, {
+        data: {
+          $set: {
+            datasets: [{
+              yValues: [100, 110, 105, 115],
+              label: 'Company X',
+              config: {
+                lineWidth: 2,
+                drawCircles: false,
+                drawCubic: true,
+                highlightColor: 'red',
+                color: 'red',
+                drawFilled: true,
+                fillColor: 'red',
+                fillAlpha: 60,
+                dashedLine: {
+                  lineLength: 20,
+                  spaceLength: 20
+                }
+              }
+            }, {
+              yValues: [90, 130, 100, 105],
+              label: 'Company Y',
+              config: {
+                lineWidth: 1,
+                drawCubic: true,
+                drawCubicIntensity: 0.4,
+                circleRadius: 5,
+                drawHighlightIndicators: false,
+                color: 'blue',
+                drawFilled: true,
+                fillColor: 'blue',
+                fillAlpha: 45,
+                circleColor: 'blue'
+              }
+            }, {
+              yValues: [110, 105, 115, 110],
+              label: 'Company Dashed',
+              config: {
+                color: 'green',
+                drawFilled: true,
+                drawCubic: true,
+                fillColor: 'green',
+                fillAlpha: 50
+              }
+            }],
+            xValues: ['Q1', 'Q2', 'Q3', 'Q4']
+          }
+        }
+      })
+    );
   }
 
   toggleLegend() {
@@ -54,6 +110,7 @@ class reactNativeMPAndroidChartExample extends React.Component {
       <View style={styles.container}>
         <LineChart
           style={styles.chart}
+          data={this.state.data}
           legend={this.state.legend} />
 
         <View style={styles.actions}>
