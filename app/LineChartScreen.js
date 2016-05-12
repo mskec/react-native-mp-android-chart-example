@@ -36,8 +36,6 @@ class LineChartScreen extends React.Component {
         }
       }
     };
-
-    this.toggleLegend = this.toggleLegend.bind(this);
   }
 
   componentDidMount() {
@@ -95,16 +93,6 @@ class LineChartScreen extends React.Component {
     );
   }
 
-  toggleLegend() {
-    this.setState(
-      React.addons.update(this.state, {
-        legend: {
-          $set: {enabled: !this.state.legend.enabled}
-        }
-      })
-    );
-  }
-
   render() {
     return (
       <View style={styles.container}>
@@ -112,16 +100,6 @@ class LineChartScreen extends React.Component {
           style={styles.chart}
           data={this.state.data}
           legend={this.state.legend} />
-
-        <View style={styles.actions}>
-          <Button
-            text="Toggle legend"
-            style={{color: '#fff'}}
-            containerStyle={styles.buttonContainer}
-            onPress={this.toggleLegend}>
-            Toggle legend
-          </Button>
-        </View>
       </View>
     );
   }
@@ -130,20 +108,10 @@ class LineChartScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
-    marginBottom: 5
+    backgroundColor: '#F5FCFF'
   },
   chart: {
     flex: 1
-  },
-  actions: {
-    flexDirection: 'row',
-    margin: 5,
-  },
-  buttonContainer: {
-    backgroundColor: '#03A9F4',
-    borderRadius: 5,
-    padding: 5
   }
 });
 

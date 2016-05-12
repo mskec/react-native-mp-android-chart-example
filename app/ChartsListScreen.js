@@ -51,7 +51,7 @@ class ChartsListScreen extends React.Component {
 
 const s = StyleSheet.create({
   row: {
-    padding: 10,
+    padding: 15,
     backgroundColor: '#FFF',
     borderBottomWidth: 1,
     borderBottomColor: '#CCC'
