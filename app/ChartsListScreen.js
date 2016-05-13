@@ -21,6 +21,9 @@ class ChartsListScreen extends React.Component {
       }, {
         label: 'Bar chart',
         screenName: 'BarChartScreen'
+      }, {
+        label: 'Stacked Bar chart',
+        screenName: 'StackedBarChartScreen'
       }])
     };
 

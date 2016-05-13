@@ -10,6 +10,7 @@ import React, {
 import ChartsListScreen from './app/ChartsListScreen';
 import LineChartScreen from './app/LineChartScreen';
 import BarChartScreen from './app/BarChartScreen';
+import StackedBarChartScreen from './app/StackedBarChartScreen';
 
 const MAIN_SCREEN = 'ChartsListScreen';
 
@@ -34,7 +35,8 @@ class reactNativeMPAndroidChartExample extends React.Component {
     const routes = {
       ChartsListScreen: <ChartsListScreen navigator={navigator} />,
       LineChartScreen: <LineChartScreen navigator={navigator} />,
-      BarChartScreen: <BarChartScreen navigator={navigator} />
+      BarChartScreen: <BarChartScreen navigator={navigator} />,
+      StackedBarChartScreen: <StackedBarChartScreen navigator={navigator} />
     };
 
     let screen = routes[route.name];

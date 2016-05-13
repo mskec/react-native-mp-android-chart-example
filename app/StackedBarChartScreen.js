@@ -7,7 +7,7 @@ import React, {
 
 import {BarChart} from 'react-native-mp-android-chart';
 
-class BarChartScreen extends React.Component {
+class StackedBarChartScreen extends React.Component {
 
   constructor() {
     super();
@@ -20,23 +20,18 @@ class BarChartScreen extends React.Component {
         formSize: 14,
         xEntrySpace: 10,
         yEntrySpace: 5,
-        formToTextSpace: 5,
-        wordWrapEnabled: true,
-        maxSizePercent: 0.5
+        wordWrapEnabled: true
       },
       data: {
         datasets: [{
-          yValues: [100, 105, 102, 110, 114, 109, 105, 99, 95],
-          label: 'Bar dataset',
+          yValues: [[40, 30, 20], [10, 20, 10], [30, 20, 50], [30, 50, 10]],
+          label: 'Stacked Bar dataset',
           config: {
-            color: 'teal',
-            barSpacePercent: 40,
-            barShadowColor: 'lightgrey',
-            highlightAlpha: 90,
-            highlightColor: 'red'
+            colors: ['#C0FF8C', '#FFF78C', '#FFD08C'],
+            stackLabels: ['Engineering', 'Sales', 'Marketing']
           }
         }],
-        xValues: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+        xValues: ['Q1', 'Q2', 'Q3', 'Q4']
       }
     };
   }
@@ -64,6 +59,6 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('BarChartScreen', () => BarChartScreen);
+AppRegistry.registerComponent('StackedBarChartScreen', () => StackedBarChartScreen);
 
-export default BarChartScreen;
+export default StackedBarChartScreen;
