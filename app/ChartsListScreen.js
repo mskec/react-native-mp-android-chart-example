@@ -30,6 +30,9 @@ class ChartsListScreen extends React.Component {
       }, {
         label: 'Bubble chart',
         screenName: 'BubbleChartScreen'
+      }, {
+        label: 'Scatter chart',
+        screenName: 'ScatterChartScreen'
       }])
     };
 

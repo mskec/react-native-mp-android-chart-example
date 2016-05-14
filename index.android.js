@@ -12,6 +12,7 @@ import BubbleChartScreen from './app/BubbleChartScreen';
 import ChartsListScreen from './app/ChartsListScreen';
 import LineChartScreen from './app/LineChartScreen';
 import PieChartScreen from './app/PieChartScreen';
+import ScatterChartScreen from './app/ScatterChartScreen';
 import StackedBarChartScreen from './app/StackedBarChartScreen';
 
 const MAIN_SCREEN = 'ChartsListScreen';
@@ -39,8 +40,9 @@ class reactNativeMPAndroidChartExample extends React.Component {
       BubbleChartScreen: <BubbleChartScreen navigator={navigator} />,
       ChartsListScreen: <ChartsListScreen navigator={navigator} />,
       LineChartScreen: <LineChartScreen navigator={navigator} />,
+      PieChartScreen: <PieChartScreen navigator={navigator} />,
+      ScatterChartScreen: <ScatterChartScreen navigator={navigator} />,
       StackedBarChartScreen: <StackedBarChartScreen navigator={navigator} />,
-      PieChartScreen: <PieChartScreen navigator={navigator} />
     };
 
     let screen = routes[route.name];

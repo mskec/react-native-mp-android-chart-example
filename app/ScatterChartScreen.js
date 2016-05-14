@@ -6,9 +6,9 @@ import React, {
 } from 'react-native';
 
 import _ from 'lodash';
-import {BubbleChart} from 'react-native-mp-android-chart';
+import {ScatterChart} from 'react-native-mp-android-chart';
 
-class BubbleChartScreen extends React.Component {
+class ScatterChartScreen extends React.Component {
 
   constructor() {
     super();
@@ -32,20 +32,26 @@ class BubbleChartScreen extends React.Component {
               yValues: this._randomYValues(20, 10),
               label: 'DS 1',
               config: {
-                color: '#C0FF8C',
-                highlightCircleWidth: 2
+                color: 'gray',
+                scatterShape: 'X'
               }
             }, {
               yValues: this._randomYValues(20, 10),
               label: 'DS 2',
               config: {
-                color: '#FFF78C'
+                color: 'blue',
+                scatterShape: 'CIRCLE',
+                scatterShapeHoleRadius: 6,
+                scatterShapeHoleColor: 'teal'
               }
             }, {
               yValues: this._randomYValues(20, 10),
               label: 'DS 3',
               config: {
-                color: '#FFD08C'
+                color: 'green',
+                drawHighlightIndicators: false,
+                scatterShape: 'SQUARE',
+                scatterShapeSize: 8
               }
             }],
             xValues: _.map(_.range(10), (val) => val.toString())
@@ -56,18 +62,13 @@ class BubbleChartScreen extends React.Component {
   }
 
   _randomYValues(range: number, size: number) {
-    return _.times(size, () => {
-      return {
-        value: Math.random() * range,
-        size: Math.random() * range
-      };
-    });
+    return _.times(size, () => Math.random() * range);
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <BubbleChart
+        <ScatterChart
           style={styles.chart}
           data={this.state.data}
           legend={this.state.legend}
@@ -87,6 +88,6 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('BubbleChartScreen', () => BubbleChartScreen);
+AppRegistry.registerComponent('ScatterChartScreen', () => ScatterChartScreen);
 
-export default BubbleChartScreen;
+export default ScatterChartScreen;
