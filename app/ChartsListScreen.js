@@ -27,6 +27,9 @@ class ChartsListScreen extends React.Component {
       }, {
         label: 'Pie chart',
         screenName: 'PieChartScreen'
+      }, {
+        label: 'Bubble chart',
+        screenName: 'BubbleChartScreen'
       }])
     };
 
