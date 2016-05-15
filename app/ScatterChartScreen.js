@@ -24,19 +24,22 @@ class ScatterChartScreen extends React.Component {
   }
 
   componentDidMount() {
+    const size = 30;
+    const range = 20;
+
     this.setState(
       React.addons.update(this.state, {
         data: {
           $set: {
             datasets: [{
-              yValues: this._randomYValues(20, 10),
+              yValues: this._randomYValues(range, size),
               label: 'DS 1',
               config: {
                 color: 'gray',
                 scatterShape: 'X'
               }
             }, {
-              yValues: this._randomYValues(20, 10),
+              yValues: this._randomYValues(range, size),
               label: 'DS 2',
               config: {
                 color: 'blue',
@@ -45,7 +48,7 @@ class ScatterChartScreen extends React.Component {
                 scatterShapeHoleColor: 'teal'
               }
             }, {
-              yValues: this._randomYValues(20, 10),
+              yValues: this._randomYValues(range, size),
               label: 'DS 3',
               config: {
                 color: 'green',
@@ -54,7 +57,7 @@ class ScatterChartScreen extends React.Component {
                 scatterShapeSize: 8
               }
             }],
-            xValues: _.map(_.range(10), (val) => val.toString())
+            xValues: _.map(_.range(size), (val) => val.toString())
           }
         }
       })

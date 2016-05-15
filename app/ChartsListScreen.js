@@ -33,6 +33,9 @@ class ChartsListScreen extends React.Component {
       }, {
         label: 'Scatter chart',
         screenName: 'ScatterChartScreen'
+      }, {
+        label: 'Candle Stick chart',
+        screenName: 'CandleStickChartScreen'
       }])
     };
 
