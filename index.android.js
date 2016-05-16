@@ -13,6 +13,7 @@ import CandleStickChartScreen from './app/CandleStickChartScreen';
 import ChartsListScreen from './app/ChartsListScreen';
 import LineChartScreen from './app/LineChartScreen';
 import PieChartScreen from './app/PieChartScreen';
+import RadarChartScreen from './app/RadarChartScreen';
 import ScatterChartScreen from './app/ScatterChartScreen';
 import StackedBarChartScreen from './app/StackedBarChartScreen';
 
@@ -43,6 +44,7 @@ class reactNativeMPAndroidChartExample extends React.Component {
       ChartsListScreen: <ChartsListScreen navigator={navigator} />,
       LineChartScreen: <LineChartScreen navigator={navigator} />,
       PieChartScreen: <PieChartScreen navigator={navigator} />,
+      RadarChartScreen: <RadarChartScreen navigator={navigator} />,
       ScatterChartScreen: <ScatterChartScreen navigator={navigator} />,
       StackedBarChartScreen: <StackedBarChartScreen navigator={navigator} />,
     };
