@@ -19,6 +19,11 @@ class BubbleChartScreen extends React.Component {
         textSize: 14,
         form: 'CIRCLE',
         wordWrapEnabled: true
+      },
+      animation: {
+        durationX: 1500,
+        durationY: 1500,
+        easingX: 'EaseInCirc'
       }
     };
   }
@@ -65,12 +70,14 @@ class BubbleChartScreen extends React.Component {
   }
 
   render() {
+
     return (
       <View style={styles.container}>
         <BubbleChart
           style={styles.chart}
           data={this.state.data}
           legend={this.state.legend}
+          animation={this.state.animation}
         />
       </View>
     );

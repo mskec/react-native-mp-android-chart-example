@@ -47,6 +47,7 @@ class BarChartScreen extends React.Component {
         <BarChart
           style={styles.chart}
           data={this.state.data}
+          animation={{durationX: 2000}}
           legend={this.state.legend}
         />
       </View>
