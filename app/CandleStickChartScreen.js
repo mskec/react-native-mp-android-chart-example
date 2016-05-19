@@ -21,6 +21,9 @@ class CandleStickChartScreen extends React.Component {
         position: "BELOW_CHART_RIGHT",
         wordWrapEnabled: true
       },
+      animation: {
+        durationX: 3000
+      },
       data: {
         datasets: [{
           yValues: [
@@ -96,6 +99,7 @@ class CandleStickChartScreen extends React.Component {
           style={styles.chart}
           data={this.state.data}
           description={''}
+          animation={this.state.animation}
           legend={this.state.legend}
         />
       </View>
