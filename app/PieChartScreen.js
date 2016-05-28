@@ -54,6 +54,17 @@ class PieChartScreen extends React.Component {
           description={this.state.description}
           data={this.state.data}
           legend={this.state.legend}
+
+          drawSliceText={true}
+          usePercentValues={false}
+          centerText={'Pie center text!'}
+          centerTextRadiusPercent={100}
+          holeRadius={40}
+          holeColor={'#f0f0f0'}
+          transparentCircleRadius={45}
+          transparentCircleColor={'#f0f0f0'}
+          transparentCircleAlpha={50}
+          maxAngle={350}
         />
       </View>
     );

@@ -18,10 +18,10 @@ class LineChartScreen extends React.Component {
       data: {},
       legend: {
         enabled: true,
-        textColor: "blue",
+        textColor: 'blue',
         textSize: 12,
-        position: "BELOW_CHART_RIGHT",
-        form: "SQUARE",
+        position: 'BELOW_CHART_RIGHT',
+        form: 'SQUARE',
         formSize: 14,
         xEntrySpace: 10,
         yEntrySpace: 5,
@@ -100,7 +100,15 @@ class LineChartScreen extends React.Component {
           style={styles.chart}
           data={this.state.data}
           description={{text: ''}}
-          legend={this.state.legend} />
+          legend={this.state.legend}
+
+          drawGridBackground={false}
+          borderColor={'teal'}
+          borderWidth={1}
+          drawBorders={true}
+
+          keepPositionOnRotation={false}
+        />
       </View>
     );
   }

@@ -43,6 +43,7 @@ class StackedBarChartScreen extends React.Component {
           style={styles.chart}
           data={this.state.data}
           legend={this.state.legend}
+          drawValueAboveBar={false}
         />
       </View>
     );

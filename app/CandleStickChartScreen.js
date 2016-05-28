@@ -18,7 +18,7 @@ class CandleStickChartScreen extends React.Component {
         enabled: true,
         textSize: 14,
         form: 'CIRCLE',
-        position: "BELOW_CHART_RIGHT",
+        position: 'BELOW_CHART_RIGHT',
         wordWrapEnabled: true
       },
       animation: {
@@ -101,6 +101,8 @@ class CandleStickChartScreen extends React.Component {
           description={{text: ''}}
           animation={this.state.animation}
           legend={this.state.legend}
+          maxVisibleValueCount={16}
+          autoScaleMinMaxEnabled={true}
         />
       </View>
     );

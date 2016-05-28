@@ -16,7 +16,7 @@ class BarChartScreen extends React.Component {
       legend: {
         enabled: true,
         textSize: 14,
-        form: "SQUARE",
+        form: 'SQUARE',
         formSize: 14,
         xEntrySpace: 10,
         yEntrySpace: 5,
@@ -49,6 +49,11 @@ class BarChartScreen extends React.Component {
           data={this.state.data}
           animation={{durationX: 2000}}
           legend={this.state.legend}
+          gridBackgroundColor={'#ffffff'}
+
+          drawBarShadow={false}
+          drawValueAboveBar={true}
+          drawHighlightArrow={true}
         />
       </View>
     );
