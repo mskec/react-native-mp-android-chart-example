@@ -75,7 +75,7 @@ class RadarChartScreen extends React.Component {
         <RadarChart
           style={styles.chart}
           data={this.state.data}
-          description={''}
+          description={{text: ''}}
           legend={this.state.legend} />
       </View>
     );

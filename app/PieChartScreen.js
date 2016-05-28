@@ -18,6 +18,7 @@ class PieChartScreen extends React.Component {
         textSize: 14,
         form: 'CIRCLE',
         position: 'RIGHT_OF_CHART',
+        fontFamily: 'monospace',
         wordWrapEnabled: true
       },
       data: {
@@ -32,6 +33,13 @@ class PieChartScreen extends React.Component {
           }
         }],
         xValues: ['Sandwiches', 'Salads', 'Soup', 'Beverages', 'Desserts']
+      },
+      description: {
+        text: 'This is Pie chart description',
+        textSize: 15,
+        textColor: 'darkgray',
+        fontFamily: 'monospace',
+        fontStyle: 2
       }
     };
   }
@@ -41,6 +49,9 @@ class PieChartScreen extends React.Component {
       <View style={styles.container}>
         <PieChart
           style={styles.chart}
+          logEnabled={true}
+          backgroundColor={'#f0f0f0'}
+          description={this.state.description}
           data={this.state.data}
           legend={this.state.legend}
         />
