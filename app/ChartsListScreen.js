@@ -39,6 +39,9 @@ class ChartsListScreen extends React.Component {
       }, {
         label: 'Radar chart',
         screenName: 'RadarChartScreen'
+      }, {
+        label: 'Axis line chart',
+        screenName: 'AxisLineChartScreen'
       }])
     };
 

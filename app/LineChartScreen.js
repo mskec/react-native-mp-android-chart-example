@@ -6,8 +6,6 @@ import React, {
 } from 'react-native';
 
 import {LineChart} from 'react-native-mp-android-chart';
-import Button from 'react-native-button';
-
 
 class LineChartScreen extends React.Component {
 

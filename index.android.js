@@ -7,6 +7,7 @@ import React, {
   View
 } from 'react-native';
 
+import AxisLineChartScreen from './app/AxisLineChartScreen';
 import BarChartScreen from './app/BarChartScreen';
 import BubbleChartScreen from './app/BubbleChartScreen';
 import CandleStickChartScreen from './app/CandleStickChartScreen';
@@ -38,6 +39,7 @@ class reactNativeMPAndroidChartExample extends React.Component {
 
   onRouteChange(route: Object, navigator: Object) {
     const routes = {
+      AxisLineChartScreen: <AxisLineChartScreen navigator={navigator} />,
       BarChartScreen: <BarChartScreen navigator={navigator} />,
       BubbleChartScreen: <BubbleChartScreen navigator={navigator} />,
       CandleStickChartScreen: <CandleStickChartScreen navigator={navigator} />,

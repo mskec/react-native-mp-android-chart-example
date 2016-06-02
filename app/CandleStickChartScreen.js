@@ -85,11 +85,52 @@ class CandleStickChartScreen extends React.Component {
             increasingColor: 'green',
             increasingPaintStyle: 'fill',
             decreasingColor: 'red'
-          }
+          },
+          xAxis: {},
+          yAxis: {}
         }],
         xValues: _.map(_.range(50), (val) => val.toString())
       }
     };
+  }
+
+  componentDidMount() {
+    this.setState(
+      React.addons.update(this.state, {
+        xAxis: {
+          $set: {
+            drawLabels: false,
+            drawGridLines: false,
+            position: 'BOTTOM',
+
+            limitLines: _.times(this.state.data.datasets[0].yValues.length / 5, (i) => {
+              return {
+                limit: 5 * (i + 1) + 0.5,
+                lineColor: 'darkgray',
+                lineWidth: 1,
+                label: (i + 1).toString()
+              };
+            })
+          }
+        },
+        yAxis: {
+          $set: {
+            left: {
+              limitLines: [{
+                limit: 112.4,
+                lineColor: 'red'
+              }, {
+                limit: 89.47,
+                lineColor: 'red'
+              }]
+            },
+            right: {
+              enabled: false
+            }
+          }
+        }
+      }
+    ));
   }
 
   render() {
@@ -101,6 +142,8 @@ class CandleStickChartScreen extends React.Component {
           description={{text: ''}}
           animation={this.state.animation}
           legend={this.state.legend}
+          xAxis={this.state.xAxis}
+          yAxis={this.state.yAxis}
           maxVisibleValueCount={16}
           autoScaleMinMaxEnabled={true}
         />
