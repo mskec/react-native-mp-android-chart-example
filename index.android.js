@@ -17,6 +17,7 @@ import PieChartScreen from './app/PieChartScreen';
 import RadarChartScreen from './app/RadarChartScreen';
 import ScatterChartScreen from './app/ScatterChartScreen';
 import StackedBarChartScreen from './app/StackedBarChartScreen';
+import ZeroLineChartScreen from './app/ZeroLineChartScreen';
 
 const MAIN_SCREEN = 'ChartsListScreen';
 
@@ -49,6 +50,7 @@ class reactNativeMPAndroidChartExample extends React.Component {
       RadarChartScreen: <RadarChartScreen navigator={navigator} />,
       ScatterChartScreen: <ScatterChartScreen navigator={navigator} />,
       StackedBarChartScreen: <StackedBarChartScreen navigator={navigator} />,
+      ZeroLineChartScreen: <ZeroLineChartScreen navigator={navigator} />
     };
 
     let screen = routes[route.name];

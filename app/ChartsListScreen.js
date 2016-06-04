@@ -42,6 +42,9 @@ class ChartsListScreen extends React.Component {
       }, {
         label: 'Axis line chart',
         screenName: 'AxisLineChartScreen'
+      }, {
+        label: 'Zero line chart',
+        screenName: 'ZeroLineChartScreen'
       }])
     };
 
