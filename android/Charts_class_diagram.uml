@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.github.reactNativeMPAndroidChart.charts.BarChartManager</OriginalElement>
+  <nodes>
+    <node x="350.5" y="158.0">com.github.reactNativeMPAndroidChart.charts.YAxisChartBase</node>
+    <node x="492.5" y="0.0">com.facebook.react.uimanager</node>
+    <node x="223.00000000000003" y="237.0">com.github.reactNativeMPAndroidChart.charts.BarLineChartBaseManager</node>
+    <node x="495.5" y="79.0">com.github.reactNativeMPAndroidChart.charts.ChartBaseManager</node>
+    <node x="0.0" y="316.0">com.github.reactNativeMPAndroidChart.charts.LineChartManager</node>
+    <node x="165.0" y="316.0">com.github.reactNativeMPAndroidChart.charts.BarChartManager</node>
+    <node x="500.5" y="158.0">com.github.reactNativeMPAndroidChart.charts.PieChartManager</node>
+    <node x="505.0" y="316.0">com.github.reactNativeMPAndroidChart.charts.CandleStickChartManager</node>
+    <node x="435.0" y="237.0">com.github.reactNativeMPAndroidChart.charts.RadarChartManager</node>
+    <node x="323.0" y="316.0">com.github.reactNativeMPAndroidChart.charts.ScatterChartManager</node>
+    <node x="657.5" y="158.0">com.github.reactNativeMPAndroidChart.charts.BubbleChartManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.LineChartManager" target="com.github.reactNativeMPAndroidChart.charts.BarLineChartBaseManager">
+      <point x="0.0" y="-14.5" />
+      <point x="72.5" y="286.0" />
+      <point x="247.00000000000003" y="286.0" />
+      <point x="-72.0" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.ScatterChartManager" target="com.github.reactNativeMPAndroidChart.charts.BarLineChartBaseManager">
+      <point x="0.0" y="-14.5" />
+      <point x="404.0" y="296.0" />
+      <point x="343.0" y="296.0" />
+      <point x="24.0" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.PieChartManager" target="com.github.reactNativeMPAndroidChart.charts.ChartBaseManager">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.YAxisChartBase" target="com.github.reactNativeMPAndroidChart.charts.ChartBaseManager">
+      <point x="0.0" y="-14.5" />
+      <point x="415.5" y="133.0" />
+      <point x="520.0" y="133.0" />
+      <point x="-49.0" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.RadarChartManager" target="com.github.reactNativeMPAndroidChart.charts.YAxisChartBase">
+      <point x="0.0" y="-14.5" />
+      <point x="512.0" y="212.0" />
+      <point x="448.0" y="212.0" />
+      <point x="32.5" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.BarLineChartBaseManager" target="com.github.reactNativeMPAndroidChart.charts.YAxisChartBase">
+      <point x="0.0" y="-14.5" />
+      <point x="319.0" y="212.0" />
+      <point x="383.0" y="212.0" />
+      <point x="-32.5" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.ChartBaseManager" target="com.facebook.react.uimanager">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.BarChartManager" target="com.github.reactNativeMPAndroidChart.charts.BarLineChartBaseManager">
+      <point x="0.0" y="-14.5" />
+      <point x="234.0" y="296.0" />
+      <point x="295.0" y="296.0" />
+      <point x="-24.0" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.CandleStickChartManager" target="com.github.reactNativeMPAndroidChart.charts.BarLineChartBaseManager">
+      <point x="0.0" y="-14.5" />
+      <point x="601.5" y="286.0" />
+      <point x="391.0" y="286.0" />
+      <point x="72.0" y="14.5" />
+    </edge>
+    <edge source="com.github.reactNativeMPAndroidChart.charts.BubbleChartManager" target="com.github.reactNativeMPAndroidChart.charts.ChartBaseManager">
+      <point x="0.0" y="-14.5" />
+      <point x="738.0" y="133.0" />
+      <point x="618.0" y="133.0" />
+      <point x="49.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="434.0" y="291.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
