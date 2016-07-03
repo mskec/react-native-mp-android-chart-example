@@ -5,6 +5,7 @@ import React, {
   View
 } from 'react-native';
 
+import _ from 'lodash';
 import {LineChart} from 'react-native-mp-android-chart';
 
 const COLOR_PURPLE = '#697dfb';
