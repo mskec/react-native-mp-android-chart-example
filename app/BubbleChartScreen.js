@@ -1,9 +1,11 @@
-import React, {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import reactAddonsUpdate from 'react-addons-update';
 
 import _ from 'lodash';
 import {BubbleChart} from 'react-native-mp-android-chart';
@@ -30,7 +32,7 @@ class BubbleChartScreen extends React.Component {
 
   componentDidMount() {
     this.setState(
-      React.addons.update(this.state, {
+      reactAddonsUpdate(this.state, {
         data: {
           $set: {
             datasets: [{
@@ -70,7 +72,7 @@ class BubbleChartScreen extends React.Component {
   }
 
   render() {
-
+console.log(this.state.data);
     return (
       <View style={styles.container}>
         <BubbleChart

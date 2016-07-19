@@ -1,9 +1,11 @@
-import React, {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import reactAddonsUpdate from 'react-addons-update';
 
 import {RadarChart} from 'react-native-mp-android-chart';
 import Button from 'react-native-button';
@@ -27,7 +29,7 @@ class RadarChartScreen extends React.Component {
 
   componentDidMount() {
     this.setState(
-      React.addons.update(this.state, {
+      reactAddonsUpdate(this.state, {
         data: {
           $set: {
             datasets: [{

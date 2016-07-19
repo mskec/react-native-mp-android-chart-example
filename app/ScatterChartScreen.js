@@ -1,9 +1,11 @@
-import React, {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import reactAddonsUpdate from 'react-addons-update';
 
 import _ from 'lodash';
 import {ScatterChart} from 'react-native-mp-android-chart';
@@ -28,7 +30,7 @@ class ScatterChartScreen extends React.Component {
     const range = 20;
 
     this.setState(
-      React.addons.update(this.state, {
+      reactAddonsUpdate(this.state, {
         data: {
           $set: {
             datasets: [{

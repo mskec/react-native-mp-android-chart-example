@@ -1,9 +1,11 @@
-import React, {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import reactAddonsUpdate from 'react-addons-update';
 
 import _ from 'lodash';
 import {CandleStickChart} from 'react-native-mp-android-chart';
@@ -96,7 +98,7 @@ class CandleStickChartScreen extends React.Component {
 
   componentDidMount() {
     this.setState(
-      React.addons.update(this.state, {
+      reactAddonsUpdate(this.state, {
         xAxis: {
           $set: {
             drawLabels: false,

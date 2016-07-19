@@ -1,9 +1,11 @@
-import React, {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import reactAddonsUpdate from 'react-addons-update';
 
 import _ from 'lodash';
 import {LineChart} from 'react-native-mp-android-chart';
@@ -27,7 +29,7 @@ class AxisLineChartScreen extends React.Component {
     const size = 30;
 
     this.setState(
-      React.addons.update(this.state, {
+      reactAddonsUpdate(this.state, {
         xAxis: {
           $set: {
             textColor: 'red',

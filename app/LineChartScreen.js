@@ -1,9 +1,11 @@
-import React, {
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+import reactAddonsUpdate from 'react-addons-update';
 
 import {LineChart} from 'react-native-mp-android-chart';
 
@@ -38,7 +40,7 @@ class LineChartScreen extends React.Component {
 
   componentDidMount() {
     this.setState(
-      React.addons.update(this.state, {
+      reactAddonsUpdate(this.state, {
         data: {
           $set: {
             datasets: [{

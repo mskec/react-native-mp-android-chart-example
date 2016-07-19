@@ -1,5 +1,5 @@
-
-import React, {
+import React from 'react';
+import {
   AppRegistry,
   BackAndroid,
   Navigator,
