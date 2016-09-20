@@ -107,6 +107,17 @@ class LineChartScreen extends React.Component {
           borderWidth={1}
           drawBorders={true}
 
+          touchEnabled={true}
+          dragEnabled={true}
+          scaleEnabled={true}
+          scaleXEnabled={true}
+          scaleYEnabled={true}
+          pinchZoom={true}
+          doubleTapToZoomEnabled={true}
+
+          dragDecelerationEnabled={true}
+          dragDecelerationFrictionCoef={0.99}
+
           keepPositionOnRotation={false}
         />
       </View>
