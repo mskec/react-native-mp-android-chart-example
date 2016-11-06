@@ -51,6 +51,7 @@ class BarChartScreen extends React.Component {
           animation={{durationX: 2000}}
           legend={this.state.legend}
           gridBackgroundColor={'#ffffff'}
+          marker={{enabled: true, markerColor: '#2c3e50'}}
 
           drawBarShadow={false}
           drawValueAboveBar={true}

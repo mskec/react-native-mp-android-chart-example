@@ -84,6 +84,7 @@ class CandleStickChartScreen extends React.Component {
 
             shadowColor: 'black',
             shadowWidth: 1,
+            shadowColorSameAsCandle: true,
             increasingColor: '#71BD6A',
             increasingPaintStyle: 'fill',
             decreasingColor: '#D14B5A'
@@ -118,6 +119,7 @@ class CandleStickChartScreen extends React.Component {
         yAxis: {
           $set: {
             left: {
+              valueFormatter: '$ %s',
               limitLines: [{
                 limit: 112.4,
                 lineColor: 'red'
@@ -141,6 +143,7 @@ class CandleStickChartScreen extends React.Component {
         <CandleStickChart
           style={styles.chart}
           data={this.state.data}
+          marker={{enabled: true, markerColor: '#2c3e50'}}
           description={{text: ''}}
           animation={this.state.animation}
           legend={this.state.legend}
@@ -148,6 +151,7 @@ class CandleStickChartScreen extends React.Component {
           yAxis={this.state.yAxis}
           maxVisibleValueCount={16}
           autoScaleMinMaxEnabled={true}
+          zoom={{scaleX: 4, scaleY: 1, xValue: 500, yValue: 1}}
         />
       </View>
     );
