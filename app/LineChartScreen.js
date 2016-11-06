@@ -101,6 +101,7 @@ class LineChartScreen extends React.Component {
           data={this.state.data}
           description={{text: ''}}
           legend={this.state.legend}
+          marker={{enabled: true, markerColor: '#34495e'}}
 
           drawGridBackground={false}
           borderColor={'teal'}
