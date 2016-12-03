@@ -34,6 +34,11 @@ class LineChartScreen extends React.Component {
           colors: ['red', 'blue', 'green'],
           labels: ['Company X', 'Company Y', 'Company Dashed']
         }
+      },
+      marker: {
+        enabled: true,
+        type: 'oval',
+        backgroundTint: 'teal'
       }
     };
   }
@@ -101,7 +106,7 @@ class LineChartScreen extends React.Component {
           data={this.state.data}
           description={{text: ''}}
           legend={this.state.legend}
-          marker={{enabled: true, markerColor: '#34495e'}}
+          marker={this.state.marker}
 
           drawGridBackground={false}
           borderColor={'teal'}
