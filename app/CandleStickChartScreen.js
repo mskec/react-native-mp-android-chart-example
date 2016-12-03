@@ -93,7 +93,12 @@ class CandleStickChartScreen extends React.Component {
           yAxis: {}
         }],
         xValues: _.map(_.range(50), (val) => val.toString())
-      }
+      },
+      marker: {
+        enabled: true,
+        markerColor: '#2c3e50',
+        backgroundTint: 'teal'
+     }
     };
   }
 
@@ -143,7 +148,7 @@ class CandleStickChartScreen extends React.Component {
         <CandleStickChart
           style={styles.chart}
           data={this.state.data}
-          marker={{enabled: true, markerColor: '#2c3e50'}}
+          marker={this.state.marker}
           description={{text: ''}}
           animation={this.state.animation}
           legend={this.state.legend}

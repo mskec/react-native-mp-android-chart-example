@@ -21,6 +21,10 @@ class ScatterChartScreen extends React.Component {
         textSize: 14,
         form: 'CIRCLE',
         wordWrapEnabled: true
+      },
+      marker: {
+        enabled: true,
+        type: 'com.github.reactNativeMPAndroidChart.example.marker.OvalBlueMarker'
       }
     };
   }
@@ -77,6 +81,8 @@ class ScatterChartScreen extends React.Component {
           style={styles.chart}
           data={this.state.data}
           legend={this.state.legend}
+          marker={this.state.marker}
+          zoom={this.state.zoom}
         />
       </View>
     );
