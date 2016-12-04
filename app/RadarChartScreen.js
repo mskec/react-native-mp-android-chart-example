@@ -8,7 +8,6 @@ import {
 import reactAddonsUpdate from 'react-addons-update';
 
 import {RadarChart} from 'react-native-mp-android-chart';
-import Button from 'react-native-button';
 
 
 class RadarChartScreen extends React.Component {

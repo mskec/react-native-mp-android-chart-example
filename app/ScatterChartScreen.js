@@ -82,7 +82,6 @@ class ScatterChartScreen extends React.Component {
           data={this.state.data}
           legend={this.state.legend}
           marker={this.state.marker}
-          zoom={this.state.zoom}
         />
       </View>
     );
