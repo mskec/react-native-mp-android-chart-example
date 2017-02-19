@@ -38,14 +38,14 @@ class ScatterChartScreen extends React.Component {
         data: {
           $set: {
             datasets: [{
-              yValues: this._randomYValues(range, size),
+              values: this._randomYValues(range, size),
               label: 'DS 1',
               config: {
                 color: 'gray',
                 scatterShape: 'X'
               }
             }, {
-              yValues: this._randomYValues(range, size),
+              values: this._randomYValues(range, size),
               label: 'DS 2',
               config: {
                 color: 'blue',
@@ -54,7 +54,7 @@ class ScatterChartScreen extends React.Component {
                 scatterShapeHoleColor: 'teal'
               }
             }, {
-              yValues: this._randomYValues(range, size),
+              values: this._randomYValues(range, size),
               label: 'DS 3',
               config: {
                 color: 'green',
@@ -63,7 +63,6 @@ class ScatterChartScreen extends React.Component {
                 scatterShapeSize: 8
               }
             }],
-            xValues: _.map(_.range(size), (val) => val.toString())
           }
         }
       })
@@ -71,7 +70,9 @@ class ScatterChartScreen extends React.Component {
   }
 
   _randomYValues(range: number, size: number) {
-    return _.times(size, () => Math.random() * range);
+    return _.times(size, () => {
+      return {y: Math.random() * range}
+    });
   }
 
   render() {

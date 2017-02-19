@@ -25,14 +25,14 @@ class StackedBarChartScreen extends React.Component {
       },
       data: {
         datasets: [{
-          yValues: [[40, 30, 20], [10, 20, 10], [30, 20, 50], [30, 50, 10]],
+          values: [{y: [40, 30, 20]}, {y: [10, 20, 10]}, {y: [30, 20, 50]}, {y: [30, 50, 10]}],
           label: 'Stacked Bar dataset',
           config: {
             colors: ['#C0FF8C', '#FFF78C', '#FFD08C'],
             stackLabels: ['Engineering', 'Sales', 'Marketing']
           }
         }],
-        xValues: ['Q1', 'Q2', 'Q3', 'Q4']
+        xLabels: ['Q1', 'Q2', 'Q3', 'Q4']
       }
     };
   }

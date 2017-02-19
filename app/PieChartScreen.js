@@ -24,7 +24,11 @@ class PieChartScreen extends React.Component {
       },
       data: {
         datasets: [{
-          yValues: [40, 21, 15, 9, 15],
+          values: [{y: 40, label: 'Sandwiches'},
+            {y: 21, label: 'Salads'},
+            {y: 15, label: 'Soup'},
+            { y: 9, label: 'Beverages'},
+            {y: 15, label: 'Desserts'}],
           label: 'Pie dataset',
           config: {
             colors: ['#C0FF8C', '#FFF78C', '#FFD08C', '#8CEAFF', '#FF8C9D'],
@@ -33,7 +37,6 @@ class PieChartScreen extends React.Component {
             selectionShift: 13
           }
         }],
-        xValues: ['Sandwiches', 'Salads', 'Soup', 'Beverages', 'Desserts']
       },
       description: {
         text: 'This is Pie chart description',

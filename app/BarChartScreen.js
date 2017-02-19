@@ -27,7 +27,7 @@ class BarChartScreen extends React.Component {
       },
       data: {
         datasets: [{
-          yValues: [100, 105, 102, 110, 114, 109, 105, 99, 95],
+          values: [{y: 100}, {y: 105}, {y: 102}, {y: 110}, {y: 114}, {y: 109}, {y: 105}, {y: 99}, {y: 95}],
           label: 'Bar dataset',
           config: {
             color: 'teal',
@@ -37,7 +37,7 @@ class BarChartScreen extends React.Component {
             highlightColor: 'red'
           }
         }],
-        xValues: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+        xLabels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
       }
     };
   }

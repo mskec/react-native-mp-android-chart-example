@@ -32,7 +32,7 @@ class RadarChartScreen extends React.Component {
         data: {
           $set: {
             datasets: [{
-              yValues: [100, 110, 105, 115, 110],
+              values: [{y: 100}, {y: 110}, {y: 105}, {y: 115}, {y: 110}],
               label: 'DS 1',
               config: {
                 color: '#FF8C9D',
@@ -43,7 +43,7 @@ class RadarChartScreen extends React.Component {
                 lineWidth: 2
               }
             }, {
-              yValues: [115, 100, 105, 110, 120],
+              values: [{y: 115}, {y: 100}, {y: 105}, {y: 110}, {y: 120}],
               label: 'DS 2',
               config: {
                 color: '#C0FF8C',
@@ -54,7 +54,7 @@ class RadarChartScreen extends React.Component {
                 lineWidth: 1.5
               }
             }, {
-              yValues: [105, 115, 121, 110, 105],
+              values: [{y: 105}, {y: 115}, {y: 121}, {y: 110}, {y: 105}],
               label: 'DS 3',
               config: {
                 color: '#8CEAFF',
@@ -63,7 +63,7 @@ class RadarChartScreen extends React.Component {
                 fillColor: '#8CEAFF'
               }
             }],
-            xValues: ['A', 'B', 'C', 'D', 'E']
+            xLabels: ['A', 'B', 'C', 'D', 'E']
           }
         }
       })

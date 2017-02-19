@@ -19,13 +19,12 @@ class ZeroLineChartScreen extends React.Component {
     this.state = {
       data: {
         datasets: [{
-          yValues: [-224.1, 238.5, 1280.1, -442.3, -2280.1],
+          values: [{y: -224.1}, {y: 238.5}, {y: 1280.1}, {y: -442.3}, {y: -2280.1}],
           label: 'Zero line dataset',
           config: {
             colors: [RED, GREEN, GREEN, RED, RED]
           }
         }],
-        xValues: ['1', '2', '3', '4', '5']
       },
       xAxis: {
         enabled: false

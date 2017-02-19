@@ -19,6 +19,9 @@ class ChartsListScreen extends React.Component {
       dataSource: ds.cloneWithRows([{
         label: 'Line chart',
         screenName: 'LineChartScreen'
+      },{
+        label: 'Time series Line chart',
+        screenName: 'TimeSeriesLineChartScreen'
       }, {
         label: 'Bar chart',
         screenName: 'BarChartScreen'
