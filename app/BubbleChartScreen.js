@@ -36,7 +36,7 @@ class BubbleChartScreen extends React.Component {
       reactAddonsUpdate(this.state, {
         data: {
           $set: {
-            datasets: [{
+            dataSets: [{
               values: this._randomYValues(20, size),
               label: 'DS 1',
               config: {
@@ -63,7 +63,7 @@ class BubbleChartScreen extends React.Component {
   }
 
   _randomYValues(range: number, size: number) {
-    return _.times(size, (index) => {
+    return _.times(size, () => {
       return {
         y: Math.random() * range,
         size: Math.random() * range

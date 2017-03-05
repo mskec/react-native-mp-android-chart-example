@@ -33,7 +33,7 @@ class TimeSeriesLineChartScreen extends React.Component {
         fontStyle: 1,
         custom: {
           colors: ['red', 'blue'],
-          labels: ['REFER', 'USER',]
+          // labels: ['REFER', 'USER',]
         }
       },
       marker: {
@@ -51,13 +51,13 @@ class TimeSeriesLineChartScreen extends React.Component {
       reactAddonsUpdate(this.state, {
         data: {
           $set: {
-            datasets: [{
+            dataSets: [{
               values: this._randomParabolaValues(size),
               label: 'refer',
               config: {
                 lineWidth: 2,
                 drawCircles: false,
-                drawCubic: true,
+                mode: 'CUBIC_BEZIER',
                 highlightColor: 'red',
                 color: 'red',
                 drawFilled: true,
@@ -110,7 +110,6 @@ class TimeSeriesLineChartScreen extends React.Component {
           description={{text: ''}}
           legend={this.state.legend}
           marker={this.state.marker}
-
           drawGridBackground={false}
           borderColor={'teal'}
           borderWidth={1}

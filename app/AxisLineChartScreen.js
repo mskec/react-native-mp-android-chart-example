@@ -60,14 +60,14 @@ class AxisLineChartScreen extends React.Component {
         },
         data: {
           $set: {
-            datasets: [{
+            dataSets: [{
               values: this._randomYValues(valueRange, size),
               label: '',
               config: {
                 lineWidth: 1.5,
                 drawCircles: false,
                 drawCubicIntensity: 0.3,
-                drawCubic: true,
+                mode: 'CUBIC_BEZIER',
                 drawHighlightIndicators: false,
                 color: COLOR_PURPLE,
                 drawFilled: true,

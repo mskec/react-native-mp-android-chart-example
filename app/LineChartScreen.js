@@ -39,6 +39,9 @@ class LineChartScreen extends React.Component {
         enabled: true,
         type: 'oval',
         backgroundTint: 'teal'
+      },
+      xAxis: {
+        valueFormatter: ['Q1', 'Q2', 'Q3', 'Q4']
       }
     };
   }
@@ -48,7 +51,7 @@ class LineChartScreen extends React.Component {
       reactAddonsUpdate(this.state, {
         data: {
           $set: {
-            datasets: [{
+            dataSets: [{
               values: [{y:100}, {y:110}, {y:105}, {y:115}],
               label: 'Company X',
               config: {
@@ -91,7 +94,7 @@ class LineChartScreen extends React.Component {
                 fillAlpha: 50
               }
             }],
-            xLabels: ['Q1', 'Q2', 'Q3', 'Q4']
+
           }
         }
       })
@@ -107,7 +110,7 @@ class LineChartScreen extends React.Component {
           description={{text: ''}}
           legend={this.state.legend}
           marker={this.state.marker}
-
+          xAxis={this.state.xAxis}
           drawGridBackground={false}
           borderColor={'teal'}
           borderWidth={1}

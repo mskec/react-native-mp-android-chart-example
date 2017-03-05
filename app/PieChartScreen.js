@@ -23,12 +23,12 @@ class PieChartScreen extends React.Component {
         wordWrapEnabled: true
       },
       data: {
-        datasets: [{
-          values: [{y: 40, label: 'Sandwiches'},
-            {y: 21, label: 'Salads'},
-            {y: 15, label: 'Soup'},
-            { y: 9, label: 'Beverages'},
-            {y: 15, label: 'Desserts'}],
+        dataSets: [{
+          values: [{value: 40, label: 'Sandwiches'},
+            {value: 21, label: 'Salads'},
+            {value: 15, label: 'Soup'},
+            { value: 9, label: 'Beverages'},
+            {value: 15, label: 'Desserts'}],
           label: 'Pie dataset',
           config: {
             colors: ['#C0FF8C', '#FFF78C', '#FFD08C', '#8CEAFF', '#FF8C9D'],
@@ -58,6 +58,9 @@ class PieChartScreen extends React.Component {
           description={this.state.description}
           data={this.state.data}
           legend={this.state.legend}
+
+          entryLabelColor={'black'}
+          entryLabelTextSize={8}
 
           drawSliceText={true}
           usePercentValues={false}

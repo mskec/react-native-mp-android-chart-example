@@ -24,7 +24,7 @@ class StackedBarChartScreen extends React.Component {
         wordWrapEnabled: true
       },
       data: {
-        datasets: [{
+        dataSets: [{
           values: [{y: [40, 30, 20]}, {y: [10, 20, 10]}, {y: [30, 20, 50]}, {y: [30, 50, 10]}],
           label: 'Stacked Bar dataset',
           config: {
@@ -32,7 +32,10 @@ class StackedBarChartScreen extends React.Component {
             stackLabels: ['Engineering', 'Sales', 'Marketing']
           }
         }],
-        xLabels: ['Q1', 'Q2', 'Q3', 'Q4']
+
+      },
+      xAxis: {
+        valueFormatter:['Q1', 'Q2', 'Q3', 'Q4']
       }
     };
   }
@@ -43,6 +46,7 @@ class StackedBarChartScreen extends React.Component {
         <BarChart
           style={styles.chart}
           data={this.state.data}
+          xAxis={this.state.xAxis}
           legend={this.state.legend}
           drawValueAboveBar={false}
         />

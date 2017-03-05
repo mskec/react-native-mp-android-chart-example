@@ -18,7 +18,7 @@ class ZeroLineChartScreen extends React.Component {
 
     this.state = {
       data: {
-        datasets: [{
+        dataSets: [{
           values: [{y: -224.1}, {y: 238.5}, {y: 1280.1}, {y: -442.3}, {y: -2280.1}],
           label: 'Zero line dataset',
           config: {
