@@ -27,8 +27,8 @@ class CandleStickChartScreen extends React.Component {
         durationX: 3000
       },
       data: {
-        datasets: [{
-          yValues: [
+        dataSets: [{
+          values: [
             { shadowH: 101.76, shadowL: 100.4, open: 100.78, close: 101.03 },
             { shadowH: 101.58, shadowL: 100.27, open: 101.31, close: 101.12 },
             { shadowH: 102.24, shadowL: 100.15, open: 101.41, close: 101.17 },
@@ -92,7 +92,6 @@ class CandleStickChartScreen extends React.Component {
           xAxis: {},
           yAxis: {}
         }],
-        xValues: _.map(_.range(50), (val) => val.toString())
       },
       marker: {
         enabled: true,
@@ -111,7 +110,7 @@ class CandleStickChartScreen extends React.Component {
             drawGridLines: false,
             position: 'BOTTOM',
 
-            limitLines: _.times(this.state.data.datasets[0].yValues.length / 5, (i) => {
+            limitLines: _.times(this.state.data.dataSets[0].values.length / 5, (i) => {
               return {
                 limit: 5 * (i + 1) + 0.5,
                 lineColor: 'darkgray',

@@ -7,9 +7,10 @@ import {
 } from 'react-native';
 import reactAddonsUpdate from 'react-addons-update';
 
+import _ from 'lodash';
 import {LineChart} from 'react-native-mp-android-chart';
 
-class LineChartScreen extends React.Component {
+class TimeSeriesLineChartScreen extends React.Component {
 
   constructor() {
     super();
@@ -31,46 +32,49 @@ class LineChartScreen extends React.Component {
         fontFamily: 'monospace',
         fontStyle: 1,
         custom: {
-          colors: ['red', 'blue', 'green'],
-          labels: ['Company X', 'Company Y', 'Company Dashed']
+          colors: ['red', 'blue'],
+          // labels: ['REFER', 'USER',]
         }
       },
       marker: {
         enabled: true,
-        type: 'oval',
+        type: 'rectangle',
         backgroundTint: 'teal'
-      },
-      xAxis: {
-        valueFormatter: ['Q1', 'Q2', 'Q3', 'Q4']
       }
     };
   }
 
   componentDidMount() {
+    const size = 100;
+
     this.setState(
       reactAddonsUpdate(this.state, {
         data: {
           $set: {
             dataSets: [{
-              values: [{y:100}, {y:110}, {y:105}, {y:115}],
-              label: 'Company X',
+              values: this._randomParabolaValues(size),
+              label: 'refer',
               config: {
                 lineWidth: 2,
                 drawCircles: false,
-                drawCubic: true,
+                mode: 'CUBIC_BEZIER',
                 highlightColor: 'red',
                 color: 'red',
                 drawFilled: true,
                 fillColor: 'red',
                 fillAlpha: 60,
+                highlightEnabled: false,
                 dashedLine: {
                   lineLength: 20,
                   spaceLength: 20
                 }
               }
             }, {
-              values: [{y:90}, {y:130}, {y:100}, {y:105}],
-              label: 'Company Y',
+              values: [{x: 5, y: 90},
+                {x: 10, y: 130},
+                {x: 50, y: 2000, marker: "eat more"},
+                {x: 80, y: 9000, marker: "your are overweight, eat less"}],
+              label: 'user',
               config: {
                 lineWidth: 1,
                 drawCubic: true,
@@ -83,23 +87,19 @@ class LineChartScreen extends React.Component {
                 fillAlpha: 45,
                 circleColor: 'blue'
               }
-            }, {
-              values: [{y:110}, {y:105}, {y:115}, {y:110}],
-              label: 'Company Dashed',
-              config: {
-                color: 'green',
-                drawFilled: true,
-                drawCubic: true,
-                fillColor: 'green',
-                fillAlpha: 50
-              }
             }],
-
           }
         }
       })
     );
   }
+
+  _randomParabolaValues(size: number) {
+    return _.times(size, (index) => {
+      return {x: index, y: index * index}
+    });
+  }
+
 
   render() {
     return (
@@ -110,7 +110,6 @@ class LineChartScreen extends React.Component {
           description={{text: ''}}
           legend={this.state.legend}
           marker={this.state.marker}
-          xAxis={this.state.xAxis}
           drawGridBackground={false}
           borderColor={'teal'}
           borderWidth={1}
@@ -144,6 +143,6 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('LineChartScreen', () => LineChartScreen);
+AppRegistry.registerComponent('TimeSeriesLineChartScreen', () => TimeSeriesLineChartScreen);
 
-export default LineChartScreen;
+export default TimeSeriesLineChartScreen;

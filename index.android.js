@@ -13,6 +13,7 @@ import BubbleChartScreen from './app/BubbleChartScreen';
 import CandleStickChartScreen from './app/CandleStickChartScreen';
 import ChartsListScreen from './app/ChartsListScreen';
 import LineChartScreen from './app/LineChartScreen';
+import TimeSeriesLineChartScreen from './app/TimeSeriesLineChartScreen';
 import PieChartScreen from './app/PieChartScreen';
 import RadarChartScreen from './app/RadarChartScreen';
 import ScatterChartScreen from './app/ScatterChartScreen';
@@ -46,6 +47,7 @@ class reactNativeMPAndroidChartExample extends React.Component {
       CandleStickChartScreen: <CandleStickChartScreen navigator={navigator} />,
       ChartsListScreen: <ChartsListScreen navigator={navigator} />,
       LineChartScreen: <LineChartScreen navigator={navigator} />,
+      TimeSeriesLineChartScreen: <TimeSeriesLineChartScreen navigator={navigator} />,
       PieChartScreen: <PieChartScreen navigator={navigator} />,
       RadarChartScreen: <RadarChartScreen navigator={navigator} />,
       ScatterChartScreen: <ScatterChartScreen navigator={navigator} />,

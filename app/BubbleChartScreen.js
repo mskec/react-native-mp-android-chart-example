@@ -36,27 +36,26 @@ class BubbleChartScreen extends React.Component {
       reactAddonsUpdate(this.state, {
         data: {
           $set: {
-            datasets: [{
-              yValues: this._randomYValues(20, size),
+            dataSets: [{
+              values: this._randomYValues(20, size),
               label: 'DS 1',
               config: {
                 color: '#C0FF8C',
                 highlightCircleWidth: 2
               }
             }, {
-              yValues: this._randomYValues(20, size),
+              values: this._randomYValues(20, size),
               label: 'DS 2',
               config: {
                 color: '#FFF78C'
               }
             }, {
-              yValues: this._randomYValues(20, size),
+              values: this._randomYValues(20, size),
               label: 'DS 3',
               config: {
                 color: '#FFD08C'
               }
             }],
-            xValues: _.map(_.range(size), (val) => val.toString())
           }
         }
       })
@@ -66,7 +65,7 @@ class BubbleChartScreen extends React.Component {
   _randomYValues(range: number, size: number) {
     return _.times(size, () => {
       return {
-        value: Math.random() * range,
+        y: Math.random() * range,
         size: Math.random() * range
       };
     });

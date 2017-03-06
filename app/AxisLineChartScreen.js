@@ -44,9 +44,7 @@ class AxisLineChartScreen extends React.Component {
               lineLength: 10,
               spaceLength: 10
             },
-            labelsToSkip: 4,
             avoidFirstLastClipping: true,
-            spaceBetweenLabels: 6,
             position: 'BOTTOM'
           }
         },
@@ -62,14 +60,14 @@ class AxisLineChartScreen extends React.Component {
         },
         data: {
           $set: {
-            datasets: [{
-              yValues: this._randomYValues(valueRange, size),
+            dataSets: [{
+              values: this._randomYValues(valueRange, size),
               label: '',
               config: {
                 lineWidth: 1.5,
                 drawCircles: false,
                 drawCubicIntensity: 0.3,
-                drawCubic: true,
+                mode: 'CUBIC_BEZIER',
                 drawHighlightIndicators: false,
                 color: COLOR_PURPLE,
                 drawFilled: true,
@@ -77,7 +75,6 @@ class AxisLineChartScreen extends React.Component {
                 fillAlpha: 90
               }
             }],
-            xValues: _.map(_.range(size), (val) => val.toString())
           }
         }
       })
@@ -91,7 +88,7 @@ class AxisLineChartScreen extends React.Component {
     return _.times(size, () => {
       let min = lastValue * (1 - nextValueMaxDiff);
       let max = lastValue * (1 + nextValueMaxDiff);
-      return Math.random() * (max - min) + min;
+      return {y: Math.random() * (max - min) + min};
     });
   }
 

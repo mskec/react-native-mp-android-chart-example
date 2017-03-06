@@ -22,7 +22,8 @@ class RadarChartScreen extends React.Component {
         textSize: 14,
         form: 'CIRCLE',
         wordWrapEnabled: true
-      }
+      },
+      xAxis:{}
     };
   }
 
@@ -31,8 +32,8 @@ class RadarChartScreen extends React.Component {
       reactAddonsUpdate(this.state, {
         data: {
           $set: {
-            datasets: [{
-              yValues: [100, 110, 105, 115, 110],
+            dataSets: [{
+              values: [{value: 100}, {value: 110}, {value: 105}, {value: 115}, {value: 110}],
               label: 'DS 1',
               config: {
                 color: '#FF8C9D',
@@ -43,7 +44,7 @@ class RadarChartScreen extends React.Component {
                 lineWidth: 2
               }
             }, {
-              yValues: [115, 100, 105, 110, 120],
+              values: [{value: 115}, {value: 100}, {value: 105}, {value: 110}, {value: 120}],
               label: 'DS 2',
               config: {
                 color: '#C0FF8C',
@@ -54,7 +55,7 @@ class RadarChartScreen extends React.Component {
                 lineWidth: 1.5
               }
             }, {
-              yValues: [105, 115, 121, 110, 105],
+              values: [{value: 105}, {value: 115}, {value: 121}, {value: 110}, {value: 105}],
               label: 'DS 3',
               config: {
                 color: '#8CEAFF',
@@ -63,7 +64,12 @@ class RadarChartScreen extends React.Component {
                 fillColor: '#8CEAFF'
               }
             }],
-            xValues: ['A', 'B', 'C', 'D', 'E']
+
+          }
+        },
+        xAxis:{
+          $set : {
+            valueFormatter: ['A', 'B', 'C', 'D', 'E']
           }
         }
       })
@@ -76,6 +82,7 @@ class RadarChartScreen extends React.Component {
         <RadarChart
           style={styles.chart}
           data={this.state.data}
+          xAxis={this.state.xAxis}
           description={{text: ''}}
           legend={this.state.legend}
           skipWebLineCount={1}
